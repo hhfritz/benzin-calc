@@ -1,19 +1,16 @@
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.querySelector("#gradient");
+var liter = document.querySelector("#liter");
+var km = document.querySelector("#km");
+var button = document.querySelector("#berechnen");
+var ergebnis = document.querySelector("#erg");
 
-function setGradient() {
-	body.style.background = 
-		"linear-gradient(to right, "
-		+ color1.value
-		+ ", "
-		+ color2.value
-		+ ")";
 
-	css.textContent = body.style.background + ";";
-}
+function benzinVerbrauch () {
+	if (Number(liter.value) > 0 && Number(km.value) > 0) {
+		ergebnis.innerText = (Number(liter.value) / Number(km.value) * 100).toFixed(1) + " Liter pro 100km";
+	} else {
+		ergebnis.innerText = "Keine gültigen Werte";
+	}
+} 
 
-color1.addEventListener("input", setGradient);
+button.addEventListener("click", benzinVerbrauch);
 
-color2.addEventListener("input", setGradient);

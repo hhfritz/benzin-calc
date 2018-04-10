@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Gradient Background</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>Benzinrechner</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body id="gradient">
-	<h1>Background Generator</h1>
-	<input class="color1" type="color" name="color1" value="#ff0000">
-	<input class="color2" type="color" name="color2" value="#ffff00">
-	<h2>Current CSS Background</h2>
-	<h3></h3>
-	<script type="text/javascript" src="script.js"></script>
+<body>
+	<div class="container">
+		<h1>Benzinrechner</h1>
+		<label for="liter" class="form-control">getankte Liter:</label>
+		<input type="number" name="liter" id="liter" class="form-control"><br>
+		<label for="km" class="form-control">gefahrene Kilometer:</label>
+		<input type="number" name="km" id="km" class="form-control"><br>
+		<button id="berechnen" class="btn btn-info">Berechnen</button><hr>
+		<label for="" class="form-control">Verbrauch:</label>
+		<h5 id="erg" class="form-control"></h5>
+		<script type="text/javascript" src="script.js"></script>
+	</div>
 </body>
 </html>
